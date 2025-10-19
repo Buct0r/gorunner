@@ -1,0 +1,102 @@
+{
+  "name": "gorunner",
+  "displayName": "GoRunner",
+  "description": "An extension to quickly run Go codes without typing in the terminal",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Buct0r/gorunner.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+  "commands": [
+    {
+      "command": "gorunner.run",
+      "title": "Run Go Code",
+      "icon": {
+        "light": "images/run.svg",
+        "dark": "images/run.svg"
+      }
+    },
+    {
+      "command": "gorunner.runFile",
+      "title": "GoRun: go run (Current File)"
+    },
+    {
+      "command": "gorunner.build",
+      "title": "GoRun: go build (Current Module)"
+    },
+    {
+      "command": "gorunner.buildFile",
+      "title": "GoRun: go build (Current File)"
+    },
+    {
+      "command": "gorunner.test",
+      "title": "GoRun: go test"
+    },
+    { 
+      "command": "gorunner.run",
+      "title": "GoRun: go run (Current Module)"
+    }
+  ],
+  "submenus": [
+    {
+      "id": "gorunner.submenu",
+      "label": "GoRunner",
+      "icon": "images/run.svg"
+    }
+  ],
+  "menus": {
+  "editor/title": [
+    {
+      "submenu": "gorunner.submenu",
+      "when": "editorLangId == 'go'",
+      "group": "navigation"
+    }
+  ],
+  "gorunner.submenu": [
+    {
+      "command": "gorunner.run",
+      "group": "1_run"
+    },
+    {
+      "command": "gorunner.runFile",
+      "group": "2_run"
+    },
+    {
+      "command": "gorunner.build",
+      "group": "3_build"
+    },
+    {
+      "command": "gorunner.buildFile",
+      "group": "4_build"
+    },
+    {
+      "command": "gorunner.test",
+      "group": "5_test"
+    }
+  ]
+}
+},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.34.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
