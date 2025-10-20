@@ -4,12 +4,14 @@
   "description": "An extension to quickly run Go codes without typing in the terminal",
   "version": "1.0.0",
   "license": "MIT",
-  "engines": {
-    "vscode": "^1.104.0"
-  },
+  "publisher": "Buct0r",
+  "icon": "GoRunner.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/Buct0r/gorunner.git"
+  },
+  "engines": {
+    "vscode": "^1.104.0"
   },
   "categories": [
     "Other"

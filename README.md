@@ -1,5 +1,7 @@
 # GoRunner 
 
+![GoRunner](GoRunner.png)
+
 An extension to quickly run Go codes without typing in the terminal
 
 ## Features

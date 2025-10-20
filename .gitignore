@@ -3,3 +3,4 @@
 .vscode-test.mjs
 /test
 vsc-extension-quickstart.md
+*.vsix
